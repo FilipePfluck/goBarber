@@ -25,7 +25,7 @@ class User {
     @UpdateDateColumn()
     updated_at: Date
 
-    @Expose({ name: 'avatar_url '})
+    @Expose({ name: 'avatar_url'})
     getAvatarUrl():string | null{
         return this.avatar 
             ? `${process.env.APP_API_URL}/files/${this.avatar}`

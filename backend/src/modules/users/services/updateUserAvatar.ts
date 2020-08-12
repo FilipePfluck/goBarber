@@ -22,7 +22,7 @@ export default class UpdateUserAvatar {
     ){}
 
     public async execute({ user_id, avatarFilename }: IRequest):Promise<User>{
-
+        console.log('service')
         const user = await this.usersRepository.findById(user_id)
 
         if(!user){

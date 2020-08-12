@@ -11,6 +11,8 @@ export default class UserssController {
         try{
             const { name, email, password } = request.body
 
+            console.log('controller')
+
             const createUser = container.resolve(CreateUser)
 
             const user = await createUser.execute({

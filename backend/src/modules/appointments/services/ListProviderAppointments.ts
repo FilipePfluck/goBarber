@@ -26,12 +26,14 @@ export default class ListProviderAppointments {
         month, 
         day 
     }: IRequest):Promise<Appointment[]>{
-       const appointments = await this.appointmentsRepository.findInDayFromProvider({
+        const appointments = await this.appointmentsRepository.findInDayFromProvider({
            day,
            month,
            year,
            provider_id
-       })
+        })
+
+       
        
         return appointments 
     }

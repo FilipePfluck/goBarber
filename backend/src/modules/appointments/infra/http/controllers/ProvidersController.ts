@@ -2,6 +2,8 @@ import { Request, Response } from 'express'
 import { parseISO } from 'date-fns'
 import { container } from 'tsyringe'
 
+import { classToClass } from 'class-transformer'
+
 import ListProviders from '@modules/appointments/services/ListProvider'
 
 export default class ProvidersController {
@@ -14,6 +16,6 @@ export default class ProvidersController {
             except_user_id: user_id
         })
 
-        return response.json(providers)
+        return response.json(classToClass(providers))
     }
 }
