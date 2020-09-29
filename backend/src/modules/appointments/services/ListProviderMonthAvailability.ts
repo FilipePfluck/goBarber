@@ -26,7 +26,6 @@ export default class ListProviderMonthAvailability {
     ){}
 
     public async execute({ provider_id, year, month }: IRequest):Promise<IResponse>{
-        console.log('ok')
 
         const numberOfDaysInMonth = getDaysInMonth(
             new Date(year, month - 1)
@@ -36,9 +35,6 @@ export default class ListProviderMonthAvailability {
             { length: numberOfDaysInMonth },
             (value, index) => index + 1
         )
-
-        console.log(eachDayArray)
-        console.log(this.appointmentsRepository)
 
         const appointments = await this.appointmentsRepository.findInMonthFromProvider({
             provider_id,
