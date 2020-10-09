@@ -20,8 +20,6 @@ export default class UserssController {
                 email,
                 password
             })
-
-            delete user.password
     
             return response.json(classToClass(user))
         }catch(error){
@@ -44,8 +42,6 @@ export default class UserssController {
                 old_password
             })
 
-            delete user.password
-
             return response.json(classToClass(user))
         }catch(error){
             return response.status(400).json({error: error.message})
@@ -59,8 +55,6 @@ export default class UserssController {
             const showUser = container.resolve(ShowUser)
 
             const user = await showUser.execute({user_id})
-
-            delete user.password
 
             return response.json(classToClass(user))
         }catch(error){
