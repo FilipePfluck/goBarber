@@ -11,3 +11,8 @@ Aprendi alguns princípios do SOLID, e aprendi a utilizar injeção de dependên
 
 Desenvolvendo o frontend, eu aprendi muito sobre React e Styled Components. 
 Tive muito cuidado com a estética da aplicação, sendo talvez a aplicação mais bonita que eu tinha desenvolvido até o momento. 
+Aprendi sobre validação de formulários.
+
+E no aplicativo mobile eu aperfeiçoei minha capacidade de desenvolver interfaces com o React Native. 
+Destaco como um dos maiores aprendizados que tive com o aplicativo, o cuidado com a usabilidade dos Inputs, 
+fazendo um input triggar o próximo assim que o usuário termina de digitar. 
